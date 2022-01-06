@@ -62,6 +62,7 @@ return packer.startup(function(use)
   -- Colorschemes
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
   use "lunarvim/darkplus.nvim"
+  use 'navarasu/onedark.nvim'
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -70,6 +71,7 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-cmdline" -- cmdline completions
   use "saadparwaiz1/cmp_luasnip" -- snippet completions
   use "hrsh7th/cmp-nvim-lsp"
+  use "ludovicchabant/vim-gutentags"
 
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
@@ -91,8 +93,51 @@ return packer.startup(function(use)
   }
   use "JoosepAlviste/nvim-ts-context-commentstring"
 
+  -- My plugins (Lee Sutton)
+
   -- Git
   use "lewis6991/gitsigns.nvim"
+
+  -- Notes
+  use "xolox/vim-notes"
+  use "xolox/vim-misc"
+
+  -- Smooth scrolling
+  use "psliwka/vim-smoothie"
+
+  -- python formatting
+  use "psf/black"
+
+  -- vim surround
+  use "tpope/vim-surround"
+
+  -- Better highlighting for errors
+  use {
+    "folke/trouble.nvim",
+    requires = "kyazdani42/nvim-web-devicons",
+    config = function()
+      require("trouble").setup {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section belo--[[ w ]]
+      }
+    end
+  }
+
+  use 'folke/lsp-colors.nvim'
+
+  -- highlight todo comments
+  use {
+    "folke/todo-comments.nvim",
+    requires = "nvim-lua/plenary.nvim",
+    config = function()
+      require("todo-comments").setup {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+      }
+    end
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
