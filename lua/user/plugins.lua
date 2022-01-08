@@ -105,11 +105,21 @@ return packer.startup(function(use)
   -- Smooth scrolling
   use "psliwka/vim-smoothie"
 
+  -- better python folding
+  use "kalekundert/vim-coiled-snake"
+  use "Konfekt/FastFold" 
+
   -- python formatting
   use "psf/black"
+  use 'fisadev/vim-isort'
 
-  -- vim surround
+  -- tpope
   use "tpope/vim-surround"
+  use "tpope/vim-rails"
+  use "tpope/vim-fugitive"
+
+  -- Run tests from within vim
+  use 'vim-test/vim-test'
 
   -- Better highlighting for errors
   use {
