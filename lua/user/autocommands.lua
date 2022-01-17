@@ -30,6 +30,20 @@ vim.cmd [[
   augroup end
 ]]
 
+
+-- Strip trailing whitespace on save
+vim.cmd [[
+  autocmd BufWritePre * :%s/\s\+$//e
+]]
+
+-- set default spacing
+vim.cmd [[
+  set shiftwidth=4
+]]
+vim.cmd [[
+  autocmd FileType ruby setlocal shiftwidth=2 softtabstop=2 expandtab
+]]
+
 -- Autoformat
 -- augroup _lsp
 --   autocmd!
