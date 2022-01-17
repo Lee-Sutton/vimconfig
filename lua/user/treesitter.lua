@@ -21,3 +21,6 @@ configs.setup {
     enable_autocmd = false,
   },
 }
+
+vim.o.foldmethod = 'expr'
+vim.o.foldexpr = 'nvim_treesitter#foldexpr()'
