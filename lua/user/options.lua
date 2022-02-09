@@ -17,7 +17,7 @@ local options = {
   splitright = true,                       -- force all vertical splits to go to the right of current window
   swapfile = false,                        -- creates a swapfile
   -- termguicolors = true,                    -- set term gui colors (most terminals support this)
-  timeoutlen = 100,                        -- time to wait for a mapped sequence to complete (in milliseconds)
+  timeoutlen = 200,                        -- time to wait for a mapped sequence to complete (in milliseconds)
   undofile = true,                         -- enable persistent undo
   updatetime = 300,                        -- faster completion (4000ms default)
   writebackup = false,                     -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
@@ -42,7 +42,20 @@ for k, v in pairs(options) do
 end
 
 vim.g["python3_host_prog"] = "/Users/leesutton/mambaforge/bin/python3"
+-- vim.cmd "let g:notes_directories = ['~/Dropbox/org/']"
 
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
 vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
+vim.cmd "set foldlevelstart=99"
+
+-- vimwiki required config
+vim.cmd "set nocompatible"
+vim.cmd "filetype plugin on"
+vim.cmd "syntax on"
+
+-- spelling
+vim.cmd "set spelllang=en"
+vim.cmd "set spellsuggest=best,9"
+vim.cmd "set spell"
+vim.cmd "set timeout"

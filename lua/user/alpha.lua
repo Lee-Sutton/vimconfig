@@ -28,7 +28,14 @@ local function footer()
 	-- local fortune = handle:read("*a")
 	-- handle:close()
 	-- return fortune
-	return "chrisatmachine.com"
+	local quotes = {
+		"The biggest issue on software teams is making sure everyone understands what everyone else is doing.",
+		"Now I'm a pretty lazy person and am prepared to work quite hard in order to avoid work.",
+		"Any fool can write code that a computer can understand. Good programmers write code that humans can understand.",
+		"If you're afraid to change something it is clearly poorly designed.",
+		"I find that writing unit tests actually increases my programming speed",
+	}
+	return quotes[math.random(#quotes)]
 end
 
 dashboard.section.footer.val = footer()

@@ -1,8 +1,8 @@
 vim.cmd [[
   augroup _general_settings
     autocmd!
-    autocmd FileType qf,help,man,lspinfo nnoremap <silent> <buffer> q :close<CR> 
-    autocmd TextYankPost * silent!lua require('vim.highlight').on_yank({higroup = 'Visual', timeout = 200}) 
+    autocmd FileType qf,help,man,lspinfo nnoremap <silent> <buffer> q :close<CR>
+    autocmd TextYankPost * silent!lua require('vim.highlight').on_yank({higroup = 'Visual', timeout = 200})
     autocmd BufWinEnter * :set formatoptions-=cro
     autocmd FileType qf set nobuflisted
   augroup end
@@ -21,7 +21,7 @@ vim.cmd [[
 
   augroup _auto_resize
     autocmd!
-    autocmd VimResized * tabdo wincmd = 
+    autocmd VimResized * tabdo wincmd =
   augroup end
 
   augroup _alpha
@@ -36,13 +36,13 @@ vim.cmd [[
   autocmd BufWritePre * :%s/\s\+$//e
 ]]
 
--- set default spacing
-vim.cmd [[
-  set shiftwidth=4
-]]
-vim.cmd [[
-  autocmd FileType ruby setlocal shiftwidth=2 softtabstop=2 expandtab
-]]
+-- -- set default spacing
+-- vim.cmd [[
+--   set shiftwidth=4
+-- ]]
+-- vim.cmd [[
+--   autocmd FileType ruby setlocal shiftwidth=2 softtabstop=2 expandtab
+-- ]]
 
 -- Autoformat
 -- augroup _lsp

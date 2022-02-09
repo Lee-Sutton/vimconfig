@@ -102,12 +102,13 @@ return packer.startup(function(use)
   use "xolox/vim-notes"
   use "xolox/vim-misc"
 
+  use "vimwiki/vimwiki"
+
   -- Smooth scrolling
   use "psliwka/vim-smoothie"
 
-  -- better python folding
-  use "kalekundert/vim-coiled-snake"
-  use "Konfekt/FastFold" 
+  -- Sneaky
+  use "justinmk/vim-sneak"
 
   -- python formatting
   use "psf/black"
@@ -117,6 +118,11 @@ return packer.startup(function(use)
   use "tpope/vim-surround"
   use "tpope/vim-rails"
   use "tpope/vim-fugitive"
+  use "tpope/vim-projectionist"
+  use "tpope/vim-sleuth"
+
+  -- emmet for better html snippets
+  use "mattn/emmet-vim"
 
   -- Run tests from within vim
   use 'vim-test/vim-test'
@@ -132,6 +138,15 @@ return packer.startup(function(use)
         -- refer to the configuration section belo--[[ w ]]
       }
     end
+  }
+
+  -- find and replace
+  use "brooth/far.vim"
+  use "nvim-pack/nvim-spectre"
+
+  use {
+    "kkoomen/vim-doge",
+     run = ':call doge#install()'
   }
 
   use 'folke/lsp-colors.nvim'

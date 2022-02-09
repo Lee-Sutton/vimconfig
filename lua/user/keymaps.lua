@@ -25,6 +25,15 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
+-- Easy quit
+keymap("n", "<leader>q", ":q<CR>", opts)
+keymap("n", "<leader>Q", ":qa!<CR>", opts)
+keymap("n", "<leader>;", ":q<CR>", opts)
+keymap("n", "<leader>wq", ":wq<CR>", opts)
+
+-- Alternate file
+keymap("n", "a", "<C-w>o | :AV<CR>", opts)
+
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
 keymap("n", "<C-Down>", ":resize +2<CR>", opts)
@@ -65,7 +74,7 @@ keymap("n", "<C-t>", ":ToggleTerm<CR>", opts)
 keymap("t", "<C-h>", "<C-\\><C-N>:ToggleTerm<CR>", term_opts)
 
 
--- Comment 
+-- Comment
 keymap('n', '<leader>/', '<CMD>lua require("Comment.api").toggle_current_linewise()<CR>', opts)
 keymap('x', '<leader>/', '<ESC><CMD>lua require("Comment.api").toggle_linewise_op(vim.fn.visualmode())<CR>', opts)
 

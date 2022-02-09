@@ -79,7 +79,6 @@ local opts = {
 }
 
 local mappings = {
-  ["a"] = { "<cmd>Alpha<cr>", "Alpha" },
   ["o"] = {
     "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
     "Recent Buffers",
@@ -89,11 +88,14 @@ local mappings = {
     "Black",
   },
   ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
-  ["w"] = { "<cmd>wa<CR>", "Save" },
   ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
   ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
+  ["w"] = {
+    "<cmd>wa<cr>",
+    "Save all",
+  },
   ["f"] = {
-    "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
+    "<cmd>Telescope find_files<cr>",
     "Find files",
   },
   ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
@@ -109,13 +111,12 @@ local mappings = {
     u = { "<cmd>PackerUpdate<cr>", "Update" },
   },
 
-  ["G"] = {
-    "<cmd>tab Git<CR>",
-    "Fugitive",
-  },
+  ["G"] = {"<cmd>Git add -A | tab Git ci --verbose<CR>", "Stage and commit"},
+
   g = {
     name = "Git",
     g = { "<cmd>tab Git<CR>", "Fugitive" },
+    G = { "<cmd>Git add -A | tab Git ci --verbose<CR>", "Stage and commit" },
     P = { "<cmd>Git -c push.default=current push<CR>", "Push" },
     l = { "<cmd>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },
     j = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },
