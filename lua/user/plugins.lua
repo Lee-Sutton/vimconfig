@@ -120,6 +120,7 @@ return packer.startup(function(use)
   use "tpope/vim-fugitive"
   use "tpope/vim-projectionist"
   use "tpope/vim-sleuth"
+  use "tpope/vim-abolish"
 
   -- emmet for better html snippets
   use "mattn/emmet-vim"

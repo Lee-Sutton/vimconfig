@@ -32,7 +32,7 @@ keymap("n", "<leader>;", ":q<CR>", opts)
 keymap("n", "<leader>wq", ":wq<CR>", opts)
 
 -- Alternate file
-keymap("n", "a", "<C-w>o | :AV<CR>", opts)
+keymap("n", "<Leader>a", "<C-w>o | :AV<CR>", opts)
 
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
