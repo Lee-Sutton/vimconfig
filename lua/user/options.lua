@@ -54,6 +54,8 @@ vim.cmd "set nocompatible"
 vim.cmd "filetype plugin on"
 vim.cmd "syntax on"
 
+vim.cmd "let g:vimwiki_list = [{'path': '~/Dropbox/vimwiki', 'path_html': '~/vimwiki_html/'}]"
+
 -- spelling
 vim.cmd "set spelllang=en"
 vim.cmd "set spellsuggest=best,9"
