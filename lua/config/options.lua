@@ -4,3 +4,5 @@
 vim.cmd("let test#python#runner = 'pytest'")
 vim.cmd("let test#javascript#runner = 'vitest'")
 vim.cmd("set norelativenumber")
+
+vim.opt.shiftwidth = 4 -- Size of an indent
