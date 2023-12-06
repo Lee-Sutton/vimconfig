@@ -12,7 +12,6 @@ return {
     end,
   },
   { "psliwka/vim-smoothie" },
-  { "vimwiki/vimwiki" },
   { "gyim/vim-boxdraw" },
   {
     "imNel/monorepo.nvim",
