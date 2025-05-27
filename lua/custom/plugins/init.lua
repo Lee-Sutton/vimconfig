@@ -4,4 +4,10 @@
 -- See the kickstart.nvim README for more information
 return {
   'olimorris/codecompanion.nvim',
+  'vim-test/vim-test',
+  'tpope/vim-fugitive',
+  'tpope/vim-projectionist',
+  'tpope/vim-surround',
+  'numToStr/FTerm.nvim',
+  'vimwiki/vimwiki',
 }
