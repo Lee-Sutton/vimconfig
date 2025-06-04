@@ -11,6 +11,7 @@ map('n', '<CR>', 'za')
 map('n', '<Leader>F', ':EslintFixAll<CR>')
 map('n', '<Leader>p', ':FzfLua git_files<CR>')
 map('n', '<Leader>;', ':q<CR>')
+map('n', '<Leader>qq', ':qa<CR>')
 map('n', '<Leader>A', ':AV<CR>')
 map('n', '<Leader>?', ':Telescope grep_string<CR>')
 map('n', '<Leader>L', ':LspRestart<CR>')
@@ -27,10 +28,15 @@ map('n', '<Leader>fp', ":lua require'telescope'.extensions.project.project{}<CR>
 map('n', '<Leader>gg', ':Git<CR>')
 map('n', '<Leader>ff', ':Telescope git_files<CR>')
 
-map('n', '<Leader>ac', ':CodeCompanionChat<CR>')
-map('n', '<Leader>aA', ':CodeCompanionActions<CR>')
+map('n', '<Leader>ac', ':CopilotChat<CR>')
+map('n', '<Leader>ap', ':CopilotChatPrompts<CR>')
+map('n', '<Leader>as', ':CopilotStatus<CR>')
 
 map('n', '<Leader>ff', ':FzfLua git_files<CR>')
+
+-- code diagnostics
+map('n', '<Leader>cd', ':lua vim.diagnostic.open_float()<CR>')
+map('n', '<Leader>ca', ':lua vim.lsp.buf.code_action()<CR>')
 
 vim.keymap.set('n', '<leader>m', function()
   require('telescope').extensions.monorepo.monorepo()
