@@ -7,3 +7,5 @@ vim.cmd 'set nowrap'
 
 vim.cmd 'set foldmethod=expr'
 vim.cmd 'set foldexpr=nvim_treesitter#foldexpr()'
+-- disable inline copilt suggestions
+vim.cmd 'Copilot disable'
