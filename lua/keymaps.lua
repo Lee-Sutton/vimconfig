@@ -28,9 +28,8 @@ map('n', '<Leader>fp', ":lua require'telescope'.extensions.project.project{}<CR>
 map('n', '<Leader>gg', ':Git<CR>')
 map('n', '<Leader>ff', ':Telescope git_files<CR>')
 
-map('n', '<Leader>ac', ':CopilotChat<CR>')
-map('n', '<Leader>ap', ':CopilotChatPrompts<CR>')
-map('n', '<Leader>as', ':CopilotStatus<CR>')
+-- ai tools
+map('n', '<Leader>ac', ':ClaudeCode<CR>')
 
 map('n', '<Leader>ff', ':FzfLua git_files<CR>')
 
