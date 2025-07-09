@@ -29,7 +29,10 @@ map('n', '<Leader>gg', ':Git<CR>')
 map('n', '<Leader>ff', ':Telescope git_files<CR>')
 
 -- ai tools
+local commit_prompt =
+  'Generate a commit message based on the git diff using commitzen convention. Only return the commit message in your response as I am piping the output to my clipboard'
 map('n', '<Leader>ac', ':ClaudeCode<CR>')
+map('n', '<Leader>ag', ':!git diff | claude -p "' .. commit_prompt .. '" | pbcopy<CR>')
 
 map('n', '<Leader>ff', ':FzfLua git_files<CR>')
 
